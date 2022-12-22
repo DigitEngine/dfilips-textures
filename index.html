@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fullscreen test</title>
+	<head>
+	<body>
+		<canvas id="cvs" width="640" height="480"></canvas>
+		<button id="full">Go fullscreen</button>
+		<script>
+			var cvs = document.getElementById("cvs");
+			var btn = document.getElementById("full");
+			
+			btn.addEventListener("click", function(){
+				cvs.requestFullscreen();
+			});
+		</script>
+<html>
