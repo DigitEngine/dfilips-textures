@@ -1,0 +1,28 @@
+#cvs {
+	border: 1px solid black;
+    width: 640px;
+    height: 480px;
+    cursor:none;
+}
+#full {
+    font-size: 20px;
+}
+
+body {
+    background-image: url("https://digitengine.github.io/dfilips-textures/floors/FLCHECKB.png");
+    background-size: 256px 256px;
+    background-blend-mode: multiply;
+    background-color: rgb(127, 127, 127);
+
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: none;
+}
+
+button {
+    border-radius: 5px;
+}
