@@ -2,8 +2,9 @@ var cvs = document.getElementById("cvs");
 var ctx = cvs.getContext("2d");
 var btn = document.getElementById("full");
 var floor = document.getElementsByClassName("floor")[0];
-floor.setAttribute("crossOrigin", "");
+//floor.setAttribute("crossOrigin", "");
 ctx.drawImage(floor, 0, 0);
+ctx.getImageData(0, 0, 64, 64);
 
 /*
 btn.addEventListener("click", function(){
