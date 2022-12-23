@@ -52,7 +52,7 @@ var floornum = document.getElementsByClassName("floor").length;
 
 var floors = new Array(4096);
 var floor = document.getElementsByClassName("floor")[0];
-//floor.setAttribute("crossOrigin", "");
+floor.setAttribute("crossOrigin", "");
 ctx.drawImage(floor, 0, 0);
 var cv = ctx.getImageData(0, 0, 64, 64);
 ctx.putImageData(cv, 0, 128);
