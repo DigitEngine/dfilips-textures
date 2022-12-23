@@ -1,84 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Fullscreen test</title>
-	<head>
+		<title>Page Title</title>
+		<link rel="stylesheet" src="./style.css" />
+	</head>
 	<body>
-		<canvas id="cvs" width="320" height="240" style="width:640px;height:480px;"></canvas>
-		<button id="full">Go fullscreen</button>
-		<script>
-			var cvs = document.getElementById("cvs");
-			var btn = document.getElementById("full");
-			
-			btn.addEventListener("click", function(){
-				cvs.requestFullscreen();
-			});
-			var cvs = document.getElementById("cvs");
-var ctx = cvs.getContext("2d");
-var btn = document.getElementById("full");
-
-btn.addEventListener("click", function(){
-    cvs.requestFullscreen();
-});
-
-var colors = [
-0x00, 0x00, 0x00, 0xff,
-0xaa, 0x00, 0x00, 0xff,
-0x00, 0xaa, 0x00, 0xff,
-0xaa, 0xaa, 0x00, 0xff,
-0x00, 0x00, 0xaa, 0xff,
-0xaa, 0x00, 0xaa, 0xff,
-0x00, 0xaa, 0xaa, 0xff,
-0xaa, 0xaa, 0xaa, 0xff,
-0x44, 0x44, 0x44, 0xff,
-0xff, 0x44, 0x44, 0xff,
-0x44, 0xff, 0x44, 0xff,
-0xff, 0xff, 0x44, 0xff,
-0x44, 0x44, 0xff, 0xff,
-0xff, 0x44, 0xff, 0xff,
-0x44, 0xff, 0xff, 0xff,
-0xff, 0xff, 0xff, 0xff];
-
-function getColorFromData(r, g, b)
-{
-    var col = 0;
-    var avg = (r+g+b) / 3;
-    if(avg > 0x44)col += 8;
-    if(r - avg > 0x80)col += 1;
-    if(g - avg > 0x80)col += 2;
-    if(b - avg > 0x80)col += 4;
-
-    return col;
-}
-
-var floornum = document.getElementsByClassName("floor").length;
-//var wallnum = document.getElementsByClassName("wall").length;
-//var tpnum = document.getElementsByClassName("transp").length;
-//var bgnum = document.getElementsByClassName("backgr").length;
-
-var floors = new Array(floornum * 2048);
-
-function loadFloors()
-{
-
-}
-
-var idata = new ImageData(320, 240);
-
-var time = 0;
-function update()
-{
-    for(var i = 0; i < 76800 * 4; i += 4)
-    {
-        var j = (((Math.floor(i / 16) + Math.floor(time)) % 320) % 16) * 4;
-        idata.data[i] = colors[j];
-        idata.data[i + 1] = colors[j + 1];
-        idata.data[i + 2] = colors[j + 2];
-        idata.data[i + 3] = colors[j + 3];
-    }
-    ctx.putImageData(idata, 0, 0);
-    time += 0.25;
-}
-setInterval(update, 1000 / 60);
-		</script>
-<html>
+		<h1>FilipsJS</h1>
+		<h4><i>"The Adventures of Daryl Filips" written in Javascript.</i></h4>
+		<hr/>
+		<image class="floor" src="https://digitengine.github.io/dfilips-textures/floors/FLCHECKB.png" />
+		<canvas id="cvs" width="320" height="240"></canvas>
+		<button id="full"><b>Fullscreen mode</b></button>
+		
+		<script src="./script.js"></script>
+	</body>
+</html>
