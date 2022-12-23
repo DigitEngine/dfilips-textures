@@ -1,12 +1,7 @@
 var cvs = document.getElementById("cvs");
 var ctx = cvs.getContext("2d");
 var btn = document.getElementById("full");
-var floor = document.getElementsByClassName("floor")[0];
-//floor.setAttribute("crossOrigin", "");
-ctx.drawImage(floor, 0, 0);
-ctx.getImageData(0, 0, 64, 64);
 
-/*
 btn.addEventListener("click", function(){
     cvs.requestFullscreen();
 });
@@ -56,6 +51,11 @@ var floornum = document.getElementsByClassName("floor").length;
 //var bgnum = document.getElementsByClassName("backgr").length;
 
 var floors = new Array(4096);
+var floor = document.getElementsByClassName("floor")[0];
+//floor.setAttribute("crossOrigin", "");
+ctx.drawImage(floor, 0, 0);
+var cv = ctx.getImageData(0, 0, 64, 64);
+ctx.putImageData(cv, 0, 0);
 
 var idata = new ImageData(320, 240);
 
@@ -73,4 +73,3 @@ function update()
 }
 update();
 setInterval(update, 1000 / 60);
-*/
