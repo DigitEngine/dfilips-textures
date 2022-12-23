@@ -55,7 +55,7 @@ var floor = document.getElementsByClassName("floor")[0];
 //floor.setAttribute("crossOrigin", "");
 ctx.drawImage(floor, 0, 0);
 var cv = ctx.getImageData(0, 0, 64, 64);
-ctx.putImageData(cv, 0, 0);
+ctx.putImageData(cv, 0, 128);
 
 var idata = new ImageData(320, 240);
 
