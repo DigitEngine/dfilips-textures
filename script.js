@@ -5,6 +5,7 @@ var floor = document.getElementsByClassName("floor")[0];
 floor.setAttribute("crossOrigin", "");
 ctx.drawImage(floor, 0, 0);
 
+/*
 btn.addEventListener("click", function(){
     cvs.requestFullscreen();
 });
@@ -71,3 +72,4 @@ function update()
 }
 update();
 setInterval(update, 1000 / 60);
+*/
