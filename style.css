@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url("https://digitengine.github.io/dfilips-textures/floors/FLCHECKB.png");
+    background-image: url("./floors/FLCHECKB.png");
     background-size: 256px 256px;
     background-blend-mode: multiply;
     background-color: rgb(127, 127, 127);
